@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        #options {
+            position: absolute;
+            width: 80%;
+            height: 50px;
+            margin-left: 10%;
+            background-color: #cccccc;
+            -webkit-app-region: drag;
+            -webkit-border-radius: 0 0 6px 6px;
+            -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px;
+        }
+
+        #options input {
+            -webkit-app-region: no-drag;
+        }
+
+        #window-btns {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        #window-btns button {
+            height: 28px;
+            width: 40px;
+            background-color: transparent;
+            border: none;
+            color: coral;
+            font-size: 16px;
+        }
+
+        #window-btns button:hover {
+            background-color: coral;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="options">
+        <input type="color" onchange="atrament.color = event.target.value;" value="#000000" autocomplete="off">
+    </div>
+
+    <div id="window-btns">
+        <button id="close-btn">x</button>
+    </div>
+
+<canvas></canvas>
+
+<script src="node_modules/atrament/dist/atrament.min.js"></script>
+<script src="node_modules/mousetrap/mousetrap.min.js"></script>
+<script src="node_modules/mousetrap/plugins/global-bind/mousetrap-global-bind.min.js"></script>
+<script src="app/app.js"></script>
+
+</body>
+</html>
